@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <!--Normalize.css:  consistente y predecible sin eliminar completamente los estilos predeterminados útiles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="container">
+    <header class="container-header">
+        <img src="img/logo.png" alt="">
+        <h1>Encriptador de Texto</h1>
+        <a id="textEnlace" href="#">¿Cómo funciona?</a>
+    </header>
+
+    <main class="container-main">
+        <section class="seccion" id="seccion1">
+            <div class="texto">
+                <div class="textarea-container">
+                    <textarea id="textArea" placeholder="Ingresa el texto aquí..."></textarea>
+                    <button class="clear-btn" onclick="limpiarTextos()">X</button>
+                </div>
+                <div class="advertencia">
+                    <img src="img/exclamacion.png" alt="Símbolo de advertencia">
+                    <p>Ingresa solo letras minúsculas y sin acentos.</p>
+                </div>
+            </div>
+            <div class="botones-izquierda">
+                <button class="encriptar-btn" onclick="encriptar()">Encriptar</button>
+                <button class="desencriptar-btn" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion" id="seccion2">
+            <div class="no-mensaje" id="noMensaje">
+                <img src="img/no-mensaje.png" alt="No mensaje">
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>En el lado izquierdo ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="resultado" id="resultado">
+                <textarea id="resultadoTextArea" readonly></textarea>
+                <div class="copiar">
+                    <button class="copiar-btn" onclick="copiar()">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-footer">
+        <p>Aplicativo desarrollado por Dariel Fabián &copy; 2024</p>
+    </footer> 
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
